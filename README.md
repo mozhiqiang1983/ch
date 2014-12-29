@@ -1,7 +1,7 @@
 ch
 ==
 
-项目依赖oschina的开源库，settings.xml是我自己的maven配置文件，可以直接覆盖到maven的conf目录下使用，需要连接到外网下载lib
+项目依赖oschina的开源库，需要连接到外网下载lib。settings.xml是我自己的maven配置文件,下载包有问题的话可以把我的直接覆盖到maven的conf目录下使用，
 
 项目使用到的技术有：
 springMVC
