@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data name="初始数据">
+
+	<resourcetypes name="资源类型">
+		<resourcetype id="0" name="菜单" description="菜单类型会显示在系统首页左侧菜单中" />
+		<resourcetype id="1" name="功能" description="功能类型不会显示在系统首页左侧菜单中" />
+	</resourcetypes>
+
+	<resources name="资源">
+		<resource id="xtgl" name="系统管理" url="/welcome.jsp" description="管理系统的资源、角色、机构、用户等信息" seq="0" iconCls="ext-icon-application_view_tile">
+			<resourcetype id="0" name="菜单" />
+		</resource>
+
+		<resource id="zygl" name="资源管理" url="/page/auth/resource/list" description="管理系统的资源" seq="1" iconCls="ext-icon-newspaper_link" pid="xtgl">
+			<resourcetype id="0" name="菜单" />
+		</resource>
+		<resource id="zylb" name="资源列表" url="/auth/resource/treeGrid" description="查询资源" seq="0" iconCls="ext-icon-bullet_wrench" pid="zygl">
+			<resourcetype id="1" name="功能" />
+		</resource>
+		<resource id="zytj" name="添加资源" url="/auth/resource/save" description="添加资源" seq="1" iconCls="ext-icon-bullet_wrench" pid="zygl">
+			<resourcetype id="1" name="功能" />
+		</resource>
+		<resource id="zybj" name="编辑资源" url="/auth/resource/update" description="编辑资源" seq="2" iconCls="ext-icon-bullet_wrench" pid="zygl">
+			<resourcetype id="1" name="功能" />
+		</resource>
+		<resource id="zysc" name="删除资源" url="/auth/resource/delete" description="删除资源" seq="3" iconCls="ext-icon-bullet_wrench" pid="zygl">
+			<resourcetype id="1" name="功能" />
+		</resource>
+		<resource id="zyck" name="查看资源" url="/auth/resource/get" description="查看资源" seq="4" iconCls="ext-icon-bullet_wrench" pid="zygl">
+			<resourcetype id="1" name="功能" />
+		</resource>
+
+		<resource id="jsgl" name="角色管理" url="/page/auth/role/list" description="管理系统中用户的角色" seq="2" iconCls="ext-icon-tux" pid="xtgl">
+			<resourcetype id="0" name="菜单" />
+		</resource>
+		<resource id="jslb" name="角色列表" url="/auth/role/grid" description="查询角色列表" seq="0" iconCls="ext-icon-bullet_wrench" pid="jsgl">
+			<resourcetype id="1" name="功能" />
+		</resource>
+		<resource id="jstj" name="添加角色" url="/auth/role/save" description="添加角色" seq="1" iconCls="ext-icon-bullet_wrench" pid="jsgl">
+			<resourcetype id="1" name="功能" />
+		</resource>
+		<resource id="jsbj" name="编辑角色" url="/auth/role/update" description="编辑角色" seq="2" iconCls="ext-icon-bullet_wrench" pid="jsgl">
+			<resourcetype id="1" name="功能" />
+		</resource>
+		<resource id="jssc" name="删除角色" url="/auth/role/delete" description="删除角色" seq="3" iconCls="ext-icon-bullet_wrench" pid="jsgl">
+			<resourcetype id="1" name="功能" />
+		</resource>
+		<resource id="jsck" name="查看角色" url="/auth/role/get" description="查看角色" seq="4" iconCls="ext-icon-bullet_wrench" pid="jsgl">
+			<resourcetype id="1" name="功能" />
+		</resource>
+		<resource id="jssq" name="角色授权" url="/auth/role/grant" description="角色授权" seq="5" iconCls="ext-icon-bullet_wrench" pid="jsgl">
+			<resourcetype id="1" name="功能" />
+		</resource>
+
+		<resource id="yhgl" name="用户管理" url="/page/auth/user/list" description="管理系统中用户的用户" seq="4" iconCls="ext-icon-user_suit" pid="xtgl">
+			<resourcetype id="0" name="菜单" />
+		</resource>
+		<resource id="yhlb" name="用户列表" url="/auth/user/grid" description="查询用户列表" seq="0" iconCls="ext-icon-bullet_wrench" pid="yhgl">
+			<resourcetype id="1" name="功能" />
+		</resource>
+		<resource id="yhtj" name="添加用户" url="/auth/user/save" description="添加用户" seq="1" iconCls="ext-icon-bullet_wrench" pid="yhgl">
+			<resourcetype id="1" name="功能" />
+		</resource>
+		<resource id="yhbj" name="编辑用户" url="/auth/user/update" description="编辑用户" seq="2" iconCls="ext-icon-bullet_wrench" pid="yhgl">
+			<resourcetype id="1" name="功能" />
+		</resource>
+		<resource id="yhsc" name="删除用户" url="/auth/user/delete" description="删除用户" seq="3" iconCls="ext-icon-bullet_wrench" pid="yhgl">
+			<resourcetype id="1" name="功能" />
+		</resource>
+		<resource id="yhck" name="查看用户" url="/auth/user/get" description="查看用户" seq="4" iconCls="ext-icon-bullet_wrench" pid="yhgl">
+			<resourcetype id="1" name="功能" />
+		</resource>
+		<resource id="yhjs" name="用户角色" url="/auth/user/grantRole" description="编辑用户角色" seq="5" iconCls="ext-icon-bullet_wrench" pid="yhgl">
+			<resourcetype id="1" name="功能" />
+		</resource>
+
+	</resources>
+
+	<roles name="角色">
+		<role id="0" name="超管" description="拥有系统所有权限" seq="0" />
+		<role id="1" name="Guest" description="只有查看权限" seq="1" />
+	</roles>
+
+	<roles_resources name="角色和资源对应关系">
+		<role id="1" name="Guest角色">
+			<resource id="xtgl" name="系统管理" />
+
+			<resource id="zygl" name="资源管理" />
+			<resource id="zylb" name="资源列表" />
+			<resource id="zyck" name="查看资源" />
+
+			<resource id="jsgl" name="角色管理" />
+			<resource id="jslb" name="角色列表" />
+			<resource id="jsck" name="查看角色" />
+
+			<resource id="yhgl" name="用户管理" />
+			<resource id="yhlb" name="用户列表" />
+			<resource id="yhck" name="查看用户" />
+		</role>
+	</roles_resources>
+
+
+	<users name="用户">
+		<user id="0" loginname="admin" pwd="123456" name="admin" sex="1" age="30" />
+		<user id="1" loginname="guest" pwd="123456" name="guest" sex="1" age="30" />
+	</users>
+
+	<users_roles name="用户和角色对应关系">
+		<user id="1" loginname="guest">
+			<role id="1" name="Guest角色" />
+		</user>
+	</users_roles>
+	
+
+</data>
