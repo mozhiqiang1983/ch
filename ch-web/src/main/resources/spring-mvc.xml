@@ -18,8 +18,10 @@
 
 <!-- 启用spring mvc 注解 -->
     <context:annotation-config />
-    <mvc:view-controller path="/" view-name="redirect:/index.html" /> 
-    <context:component-scan base-package="*.controller"/>
+    <!-- 
+    <mvc:view-controller path="/" view-name="redirect:/index.p" />
+     --> 
+    <context:component-scan base-package="com.ch.*.controller"/>
     
 	<!-- 自动扫描controller包下的所有类，使其认为spring mvc的控制器 -->
 	
@@ -98,34 +100,38 @@
 	<mvc:interceptors>
 		<mvc:interceptor>
 			<mvc:mapping path="/**"/>  
-			<bean class="base.interceptor.EncodingInterceptor"/>
+			<bean class="com.ch.base.interceptor.EncodingInterceptor"/>
 		</mvc:interceptor>
-		<!-- 
+		
 		<mvc:interceptor>
 		
 			<mvc:mapping path="/**"/>
 			<mvc:exclude-mapping path="/"/>
-			<mvc:exclude-mapping path="/login.html"/>
-			<mvc:exclude-mapping path="/index.html"/>
-			<mvc:exclude-mapping path="/reg.html"/> 
+			<mvc:exclude-mapping path="/page/**"/>
+			<mvc:exclude-mapping path="/**/*.html"/>
 			<mvc:exclude-mapping path="/error/*"/>
+			<mvc:exclude-mapping path="/rest/*"/>
+			<mvc:exclude-mapping path="/init"/>
 			<mvc:exclude-mapping path="/**/*_doNotNeedSession"/> 
 			<mvc:exclude-mapping path="/**/*_doNotNeedSessionAndSecurity"/>  
-			<bean class="base.interceptor.SessionInterceptor"/>
+			<bean class="com.ch.base.interceptor.SessionInterceptor"/>
 		 
 		</mvc:interceptor>
+		
 		<mvc:interceptor>
-
 			<mvc:mapping path="/**"/>
 			<mvc:exclude-mapping path="/"/>
-			<mvc:exclude-mapping path="/*.html"/>
-			<mvc:exclude-mapping path="/**/html"/> 
-			<mvc:exclude-mapping path="/error/*"/> 
+			<mvc:exclude-mapping path="/page/**"/>
+			<mvc:exclude-mapping path="/**/*.html"/>
+			<mvc:exclude-mapping path="/qiniu/*"/>
+			<mvc:exclude-mapping path="/rest/*"/>
+			<mvc:exclude-mapping path="/error/*"/>
+			<mvc:exclude-mapping path="/init"/>
 			<mvc:exclude-mapping path="/**/*_doNotNeedSecurity"/> 
 			<mvc:exclude-mapping path="/**/*_doNotNeedSessionAndSecurity"/>  
-			<bean class="base.interceptor.SecurityInterceptor"/>
+			<bean class="com.ch.base.interceptor.SecurityInterceptor"/>
 		</mvc:interceptor>
-		 -->
+		
 	</mvc:interceptors>
 	 
 	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
