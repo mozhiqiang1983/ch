@@ -33,9 +33,9 @@ ch.pixel_0 = '${contextPath}/style/images/pixel_0.gif';//0像素的背景，一�
 <script src="${contextPath}/jslib/chExtJquery.js" type="text/javascript" charset="utf-8"></script>
 
 <#-- 引入EasyUI -->
-<link id="easyuiTheme" rel="stylesheet" href="${contextPath}/jslib/jquery-easyui-1.4/themes/${easyuiTheme}/easyui.css" type="text/css">
+<link id="easyuiTheme" rel="stylesheet" href="${contextPath}/jslib/jquery-easyui-1.4.1/themes/${easyuiTheme}/easyui.css" type="text/css">
 <script type="text/javascript" src="${contextPath}/jslib/jquery-easyui-1.4.1/jquery.easyui.min.js" charset="utf-8"></script>
-<script type="text/javascript" src="${contextPath}/jslib\jquery-easyui-1.4.1/plugins/jquery.validatebox.fixed.js" charset="utf-8"></script>
+<script type="text/javascript" src="${contextPath}/jslib/jquery-easyui-1.4.1/plugins/jquery.validatebox.fixed.js" charset="utf-8"></script>
 <script type="text/javascript" src="${contextPath}/jslib/jquery-easyui-1.4.1/locale/easyui-lang-zh_CN.js" charset="utf-8"></script>
 
 
